@@ -55,5 +55,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/prefer-default-export': 'off',
+    'import/no-cycle': 'off',
   },
 }
