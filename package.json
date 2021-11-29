@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "buildci": "CI=true next build",
     "prestart": "npm run build",
     "start": "next start",
     "lint": "next lint",
@@ -14,7 +15,7 @@
     "format:check": "npm run prettier -- --check",
     "format:fix": "npm run prettier -- --write",
     "type:check": "tsc",
-    "validate": "npm-run-all --parallel type:check format:check lintes test:ci build",
+    "validate": "npm-run-all --parallel type:check format:check lintes test:ci buildci",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
