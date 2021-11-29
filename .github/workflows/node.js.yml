@@ -23,7 +23,7 @@ jobs:
           node-version: 16.x
           cache: 'npm'
       - run: npm ci
-      - run: npm run validate
+      - run: npm run validate-nobuild
       - name: Publish to Chromatic
         if: ${{ github.event_name == 'pull_request' }}
         uses: chromaui/action@v1
