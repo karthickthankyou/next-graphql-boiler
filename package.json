@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prestart": "npm run build",
     "start": "next start",
     "lint": "next lint",
     "lintes": "eslint --ext .tsx,.ts .",
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
+    "@sentry/nextjs": "^6.15.0",
     "firebase": "^9.5.0",
     "next": "12.0.4",
     "react": "17.0.2",
