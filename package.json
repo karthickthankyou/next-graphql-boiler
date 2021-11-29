@@ -20,7 +20,12 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "preanalyze": "npm run build",
+    "analyze": "npx source-map-explorer .next/static/**/*.js",
+    "depcheck": "npx dependency-cruiser --config .dependency-cruiser.js src",
+    "depcheck:graph": "npx dependency-cruiser --include-only '^src' --output-type dot src | dot -T svg > dependencygraph.svg",
+    "cloc": "npx cloc src"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
