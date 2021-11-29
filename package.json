@@ -13,7 +13,7 @@
     "format:check": "npm run prettier -- --check",
     "format:fix": "npm run prettier -- --write",
     "type:check": "tsc",
-    "validate": "npm-run-all --parallel type:check format:check lintes",
+    "validate": "npm-run-all --parallel type:check format:check lintes test:ci build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install"
