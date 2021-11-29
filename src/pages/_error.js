@@ -18,6 +18,7 @@ const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
       <div className='max-w-md p-4 border border-white rounded-lg shadow-lg bg-gray-50'>
         <h1 className='text-xl font-bold'>Oops.</h1>
         <p className='mt-2'>Something went wrong.</p>
+        <p className='mt-2'>{statusCode}</p>
         <Link href='/' className='mt-2 text-blue-600'>
           Go to home
         </Link>
