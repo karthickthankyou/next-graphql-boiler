@@ -9,6 +9,7 @@ module.exports = {
     'airbnb',
     'next/core-web-vitals',
     'plugin:storybook/recommended',
+    'plugin:cypress/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -57,5 +58,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'import/no-cycle': 'off',
+    'react/require-default-props': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
   },
 }
