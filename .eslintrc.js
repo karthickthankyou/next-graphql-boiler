@@ -9,6 +9,7 @@ module.exports = {
     'airbnb',
     'next/core-web-vitals',
     'plugin:storybook/recommended',
+    'plugin:cypress/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
