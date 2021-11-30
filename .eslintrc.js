@@ -59,5 +59,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/no-cycle': 'off',
     'react/require-default-props': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
   },
 }

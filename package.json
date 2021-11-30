@@ -32,6 +32,8 @@
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^0.1.1",
+    "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@sentry/nextjs": "^6.15.0",
     "firebase": "^9.5.0",
