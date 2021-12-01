@@ -1,6 +1,5 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import image from 'src/assets/image.jpg'
 import fallback from 'src/assets/fallback.jpg'
 import Image from './Image'
 

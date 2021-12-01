@@ -44,6 +44,7 @@ const Button = ({
   fullWidth = false,
   disabled = false,
   children = '',
+  // eslint-disable-next-line no-console
   onClickAction = () => console.error('onClick not implemented'),
   className = '',
 }: IButtonProps) => {
