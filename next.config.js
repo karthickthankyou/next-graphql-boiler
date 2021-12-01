@@ -19,6 +19,7 @@ const moduleExports = withPWA({
     runtimeCaching,
     disable: process.env.NODE_ENV === 'development',
     buildExcludes: [/middleware-manifest.json$/],
+    maximumFileSizeToCacheInBytes: 3000000,
   },
 })
 
