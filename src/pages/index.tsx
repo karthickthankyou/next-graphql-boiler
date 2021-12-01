@@ -1,10 +1,12 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from 'src/store'
 import { selectCount } from 'src/store/counter'
 import { increment, setCounterState } from 'src/store/counter/counterSlice'
+import { NextSeo } from 'next-seo'
 
 export const getStaticProps: GetStaticProps = async () => ({
   props: { data: ['Karthick', 'Ragavendran'] }, // will be passed to the page component as props
@@ -24,6 +26,10 @@ const Home: NextPage = ({
     <div>
       {JSON.stringify(count)}
       {text}
+      <NextSeo
+        title='Next boilerplate.'
+        description='A short description goes here which says what goes here.'
+      />
       {/** @ts-ignore */}
       <button type='button' onClick={() => setText(obj)}>
         Break things
@@ -80,6 +86,9 @@ const Home: NextPage = ({
             </p>
           </a>
         </div>
+        <Link prefetch={false} href='/sample'>
+          <a>To sample page </a>
+        </Link>
       </main>
 
       <footer>
