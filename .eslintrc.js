@@ -12,6 +12,7 @@ module.exports = {
     'plugin:cypress/recommended',
     'prettier',
   ],
+  ignorePatterns: ['src/generated.ts'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {

@@ -1,14 +1,21 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import type { AppProps } from 'next/app'
 import React from 'react'
-import { Provider } from 'react-redux'
-import { store } from 'src/store'
-import '../globals.css'
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+import type { AppProps } from 'next/app'
+import 'src/globals.css'
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Provider store={store}>
-    <Component {...pageProps} />
-  </Provider>
-)
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  const [queryClient] = React.useState(() => new QueryClient())
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <Hydrate state={pageProps.dehydratedState}>
+        <Component {...pageProps} />
+      </Hydrate>
+    </QueryClientProvider>
+  )
+}
 
 export default MyApp
